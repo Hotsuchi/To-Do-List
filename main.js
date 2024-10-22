@@ -2,14 +2,18 @@
 let addLsData = ()=>{
     let inputData = document.querySelector('#input-data');
     let addList = document.querySelector('#add-list');
-    addList.addEventListener('click',(e)=>{
-        let ls = JSON.parse(localStorage.getItem('todo_list')) ?? [];         
-        ls.push(inputData.value);
+    addList.addEventListener('click', (e) => {
         
-        localStorage.setItem('todo_list',JSON.stringify(ls));
-        showData();
-        inputData.value = '';
-    })
+    if (inputData.value.length >=2){
+        let ls = JSON.parse(localStorage.getItem('todo_list')) ?? [];
+        ls.push(inputData.value);
+        localStorage.setItem('todo_list', JSON.stringify(ls));
+    }else alert('Plasce Insert data Atleast 2..');
+    
+    showData();
+    inputData.value = '';
+})
+    
 }
 addLsData();
 
@@ -33,5 +37,6 @@ let delData = (p)=>{
     localStorage.setItem('todo_list',JSON.stringify(ls));
     showData();
 }
+
 
 
