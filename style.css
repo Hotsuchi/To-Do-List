@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+html,body{
+    font-size: 16px;
+    font-family: 'poppins',sans-serif;
+    background: #045d5d;
+}
+.main{
+    width: 100vw;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo{
+    background: #fff;
+    padding: 1rem;
+    border-radius: .7rem;
+}
+.todo .create-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+.todo .create-list input{
+    border: none;
+    outline: none;
+    background: rgba(0,0,0,.1);
+    padding: .5rem 1.5rem;
+    border-radius: 1rem;
+    font-size: .8rem;
+}
+.todo .create-list button{
+    border: none;
+    outline: none;
+    border-radius: 1.5rem;
+    padding: .5rem 2rem;
+    margin-left: -3rem;
+    background: seagreen;
+    color: #fff;
+    font-weight: bolder;
+}
+.show-list li{
+    text-transform: capitalize;
+    padding: .3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fa-trash-can{
+    background: tomato;
+    color: #fff;
+    padding: .2rem .3rem;
+    border-radius: .5rem;
+}
